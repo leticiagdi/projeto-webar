@@ -1,53 +1,62 @@
-# React + TypeScript + Vite
+# 🧬 Plataforma WebAR Educativa de Ciências da Vida
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma plataforma inovadora de Realidade Aumentada via navegador (WebAR) para ensino imersivo e acessível em biologia, anatomia e bioinformática.
 
-Currently, two official plugins are available:
+## 📋 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto propõe o desenvolvimento de uma **Plataforma WebAR Educativa de Ciências da Vida**, usando Realidade Aumentada via navegador (WebAR) para ensino imersivo e acessível em biologia, anatomia, e bioinformática. 
 
-## React Compiler
+A plataforma será responsiva e permitirá a projeção e interação com modelos 3D de DNA, proteínas e partes do corpo humano (como crânio, coração e pulmões) sobre superfícies reais (mesa, parede) usando apenas um **smartphone ou tablet com câmera**, eliminando a necessidade de óculos VR dedicados.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Características Principais
 
-## Expanding the ESLint configuration
+- **WebAR Acessível**: Funciona diretamente no navegador, sem necessidade de aplicativos específicos
+- **Modelos 3D Interativos**: DNA, proteínas e anatomia humana
+- **Projeção em Superfícies Reais**: Mesa, parede ou qualquer superfície plana
+- **Controles Intuitivos**: Rotação, escala e informações por toque
+- **Feedback Multimodal**: Visual, auditivo e tátil
+- **Módulos Educacionais**: Exercícios (quizzes) integrados
+- **Foco em Acessibilidade**: Design inclusivo e IHC otimizada
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Stack Tecnológico
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Frontend (Planejado)
+- **WebAR/WebXR**: Para realidade aumentada no navegador
+- **Three.js**: Renderização 3D e manipulação de modelos
+- **React**: Interface de usuário responsiva
+- **GLTF/GLB**: Formato otimizado para modelos 3D
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Backend (Atual)
+- **Node.js**: Servidor de aplicação
+- **Express.js**: Framework web
+- **MongoDB**: Banco de dados NoSQL
+- **Mongoose**: ODM para MongoDB
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📱 Funcionalidades Planejadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Seis Telas/Estados Principais:
+1. **Tela Inicial**: Seleção de categorias (DNA, Proteínas, Anatomia)
+2. **Tela de Conteúdos**: Lista de modelos disponíveis por categoria
+3. **Tela AR Principal**: 
+   - Modo de exploração livre
+   - Modo guiado
+   - Controles por toque
+4. **Tela de Informações**: Detalhes científicos dos modelos
+5. **Tela de Exercícios**: Quizzes interativos
+6. **Tela de Configurações**: Preferências e acessibilidade
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
+## 🚀 Status Atual do Projeto
+
+**🔧 Em Desenvolvimento - Fase Backend**
+
+Atualmente, o projeto conta apenas com o **backend**, que inclui:
+
+- ✅ Servidor Express.js configurado
+- ✅ Conexão com MongoDB
+- ✅ Modelos de dados (Content e User)
+- ✅ Rotas CRUD para conteúdos
+- ✅ Rotas de gerenciamento de usuários
+- ✅ Estrutura modular organizada
 import reactDom from 'eslint-plugin-react-dom'
 
 export default defineConfig([
